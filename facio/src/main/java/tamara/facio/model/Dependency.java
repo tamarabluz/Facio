@@ -8,6 +8,10 @@ import java.util.List;
 public class Dependency {
 
     private String name;
-    private List<String> dependencies;
+    private List<Dependency> dependencies;
+
+    public void addDependency(Dependency dependency) {
+        dependencies.add(dependency);
+    }
 }
 
