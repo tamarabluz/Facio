@@ -65,7 +65,7 @@
 <br>2° - Confira a <a href="http://localhost:8080/swagger-ui/index.html#/dependency-controller/postInstallationOrder">documentação<a/> ou se preferir coloque a url : http://localhost:8080/dependencies/installation-order</b> para usar o Postman.
 <br>
 <br>
-<p align="center">Exemplo do corpo da requisiçao</p>
+<p align="center">Exemplo do corpo da requisição</p>
 
 ~~~javascript
 {
