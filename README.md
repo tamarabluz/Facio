@@ -67,7 +67,7 @@
 <br>
 <p align="center">Exemplo do corpo da requisiçao</p>
 <br>
-~~~javascript
+~~~json
 {
     "name": "Teste",
     "dependencies": [
