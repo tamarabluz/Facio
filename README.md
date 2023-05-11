@@ -1,7 +1,7 @@
 ![alt text](https://media.licdn.com/dms/image/C4D0BAQEqGPG2-q3r5w/company-logo_200_200/0/1671724357303?e=2147483647&v=beta&t=btLr5harzfvv_-lc_wki4O_XZ_oWAXtux-jg7vLaK9k)
 
 <h1 align="center">Avaliação Técnica</h1>
-<p align="center">Avaliação tecnica para Facio</p>
+<p align="center">Avaliação técnica para Facio</p>
 <p align="center"> https://facio.com.br/<p/>
 <p align="center">Repositório criado para etapa de teste .</p>
 
