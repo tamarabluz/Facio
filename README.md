@@ -66,7 +66,9 @@
 <br>
 <br>
 <p align="center">Exemplo do corpo da requisiçao</p>
-<br>{
+<br>
+~~~javascript
+{
     "name": "Teste",
     "dependencies": [
         {
@@ -98,6 +100,7 @@
         }
     ]
 }
+~~~
 <br>
 <br>
 <hr>
