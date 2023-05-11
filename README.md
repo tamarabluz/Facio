@@ -67,7 +67,7 @@
 <br>
 <p align="center">Exemplo do corpo da requisiçao</p>
 <br>
-```
+
 {
     "name": "Teste",
     "dependencies": [
@@ -100,12 +100,9 @@
         }
     ]
 }
-```
+
 <br>
 <br>
-
-
-
 <hr>
 
 <h3>Autora</h3>
