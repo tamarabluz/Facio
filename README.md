@@ -67,7 +67,7 @@
 <br>
 <p align="center">Exemplo do corpo da requisiçao</p>
 <br>
-´´´
+<p align="center">
 
 {
     "name": "Teste",
@@ -101,8 +101,9 @@
         }
     ]
 }
+</p
 
-´´´
+
 
 <br>
 <br>
