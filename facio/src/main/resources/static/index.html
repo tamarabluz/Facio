@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Order of Dependencies</title>
+    <style>
+        body {
+            background-color: #3f6ae1;
+            font-family: sans-serif;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        input[type="text"],
+        textarea {
+            padding: 0.5em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            background-color: #fff;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 20em;
+            margin-bottom: 1em;
+        }
+
+        textarea {
+            width: 20em;
+            height: 10em;
+            margin-bottom: 1em;
+        }
+
+        input[type="submit"] {
+            padding: 0.5em;
+            border-radius: 5px;
+            border: none;
+            background-color: #53fec5;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #26b99a;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="https://facio.com.br"><img src="static/facio.jpg" alt="Logo"></a>
+    <h1>List of Order of Dependencies</h1>
+</header>
+
+<form method="POST" action="/installationOrder">
+    <label for="project">Project Name:</label>
+    <input type="text" id="project" name="project" required><br><br>
+    <label for="dependencies">Dependencies:</label>
+    <textarea id="dependencies" name="dependencies" rows="5" cols="50" required></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

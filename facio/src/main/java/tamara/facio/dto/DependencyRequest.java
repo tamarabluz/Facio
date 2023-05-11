@@ -1,19 +1,16 @@
-package tamara.facio.model;
+package tamara.facio.dto;
 
 import lombok.*;
+import tamara.facio.model.Dependency;
 import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Dependency {
-
+public class DependencyRequest {
     private String name;
     private List<Dependency> dependencies;
-
-    public void addDependency(Dependency dependency) {
-        dependencies.add(dependency);
-    }
 }
+
 

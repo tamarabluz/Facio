@@ -1,33 +1,39 @@
 package tamara.facio.service;
 
 import org.springframework.stereotype.Service;
+import tamara.facio.dto.DependencyRequest;
+import tamara.facio.dto.DependencyResponse;
 import tamara.facio.model.Dependency;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class DependencyService {
-        public List<String> getInstallationOrder(Dependency project) {
-            List<String> installationOrder = new ArrayList<>();
-            List<Dependency> remainingDependencies = new ArrayList<>(project.getDependencies());
+    public DependencyResponse getInstallationOrder(DependencyRequest dependencyRequest) {
+        List<String> installationOrder = new ArrayList<>();
+        Set<String> visited = new HashSet<>();
 
-            while (!remainingDependencies.isEmpty()) {
-                boolean addedDependency = false;
-                for (Dependency dependency : remainingDependencies) {
-                    if (installationOrder.containsAll(dependency.getDependencies())) {
-                        installationOrder.add(dependency.getName());
-                        remainingDependencies.remove(dependency);
-                        addedDependency = true;
-                        break;
-                    }
-                }
-                if (!addedDependency) {
-                    throw new RuntimeException("Circular dependency detected!");
-                }
+        for (Dependency dependency : dependencyRequest.getDependencies()) {
+            visit(dependency, visited, installationOrder);
+        }
+
+        return new DependencyResponse(installationOrder);
+    }
+
+    private void visit(Dependency dependency, Set<String> visited, List<String> installationOrder) {
+        String name = dependency.getName();
+
+        if (!visited.contains(name)) {
+            visited.add(name);
+
+            for (Dependency subDependency : dependency.getDependencies()) {
+                visit(subDependency, visited, installationOrder);
             }
 
-            installationOrder.add(project.getName());
-            return installationOrder;
+            installationOrder.add(name);
         }
     }
+}
