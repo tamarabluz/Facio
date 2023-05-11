@@ -66,7 +66,7 @@
 <br>
 <br>
 <p align="center">Exemplo do corpo da requisiçao</p>
-<br>
+
 ~~~javascript
 {
     "name": "Teste",
